@@ -2,7 +2,7 @@
 
 A single-page application for operations users to browse, search, filter, and inspect products — built as a frontend technical assessment.
 
-🔗 **Live Demo:** [your-vercel-url-here](https://dummyjson.com/products)
+🔗 **Live Demo:** [ZeeCo Dashboard](https://zeeco.vercel.app/)
 
 ---
 
