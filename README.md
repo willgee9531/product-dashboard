@@ -129,7 +129,6 @@ shadcn copies component source code directly into the project rather than shippi
 
 - [ ] **Add product form** — client-side validated form with optimistic insert that rolls back on error (the stretch goal most aligned with the rubric's "optimistic updates" mention)
 - [ ] **Brand filter** — fetch all products once and extract unique brands for a client-side brand filter dropdown
-- [ ] **RTL tests** — `ProductsTable` renders correctly, filter updates URL params, empty state shows when results are empty
 - [ ] **Dark mode toggle** — the CSS variables and `.dark` class are already wired by shadcn, just needs a toggle button
 - [ ] **Price range filter** — a dual-handle range slider on top-level `price` field (fully supported by the API's `sortBy=price`)
 - [ ] **Charts** — a tiny bar or pie chart showing product count grouped by brand, using Recharts or Chart.js. DummyJSON returns enough products to make this meaningful and it would give operations users a quick inventory breakdown at a glance
