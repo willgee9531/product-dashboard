@@ -6,6 +6,16 @@ A single-page application for operations users to browse, search, filter, and in
 
 ---
 
+## Screenshots
+
+### Products List
+![Products List](./screenshots/products-list.jpg)
+
+### Product Details
+![Product Details](./screenshots/product-details.jpg)
+
+---
+
 ## Tech Stack
 
 | Tool | Purpose |
