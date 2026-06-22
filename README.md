@@ -1,6 +1,6 @@
 # ZeeCo Dashboard
 
-A single-page application for operations users to browse, search, filter, and inspect products — built as a frontend technical assessment.
+A single-page application for operations users to browse, search, filter, and inspect products.
 
 🔗 **Live Demo:** [ZeeCo Dashboard](https://zeeco.vercel.app/)
 
