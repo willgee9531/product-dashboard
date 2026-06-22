@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import ProductImage from "@/components/ProductImage"
 
 function getStockBadge(status: string) {
   if (status === "In Stock") {
@@ -92,6 +93,8 @@ function ProductDetailsPage() {
     day: "numeric",
   })
 
+  document.title = `${product.title} | ZeeCo`
+
   return (
     <div>
       <Button
@@ -107,7 +110,7 @@ function ProductDetailsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         <div className="space-y-3">
           <div className="w-full h-80 rounded-lg border bg-muted overflow-hidden">
-            <img
+            <ProductImage
                 src={product.images[0]}
                 alt={product.title}
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
@@ -115,8 +118,7 @@ function ProductDetailsPage() {
           </div>
           <div className="grid grid-cols-4 gap-2">
             {product.images.slice(1, 5).map((img, i) => (
-              <img
-                key={i}
+              <ProductImage
                 src={img}
                 alt={`${product.title} view ${i + 2}`}
                 className="w-full h-20 object-cover rounded-md border bg-muted"

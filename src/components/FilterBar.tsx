@@ -29,6 +29,7 @@ function FilterBar({
   onSortChange,
 }: FilterBarProps) {
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const sortDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   function handleSearchChange(e: React.ChangeEvent<HTMLInputElement>) {
     const value = e.target.value
@@ -38,6 +39,15 @@ function FilterBar({
     debounceRef.current = setTimeout(() => {
       onSearchChange(value)
     }, 400)
+  }
+
+  function handleSortChange(value: string) {
+    if (sortDebounceRef.current) {
+      clearTimeout(sortDebounceRef.current)
+    }
+    sortDebounceRef.current = setTimeout(() => {
+      onSortChange(value as "newest" | "oldest")
+    }, 150)
   }
 
   return (
@@ -80,7 +90,7 @@ function FilterBar({
         </SelectContent>
       </Select>
 
-      <Select value={sort} onValueChange={(val) => onSortChange(val as "newest" | "oldest")}>
+      <Select value={sort} onValueChange={handleSortChange}>
         <SelectTrigger className="w-full sm:w-40" aria-label="Sort products">
           <SelectValue />
         </SelectTrigger>

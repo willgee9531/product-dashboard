@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/table"
 import { Badge } from "@/components/ui/badge"
 import { Skeleton } from "@/components/ui/skeleton"
+import ProductImage from "@/components/ProductImage"
 
 interface ProductsTableProps {
   products: Product[]
@@ -102,13 +103,15 @@ function ProductsTable({ products, isLoading, isPlaceholderData }: ProductsTable
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center gap-3">
-                    <img
-                      src={product.thumbnail}
-                      alt={product.title}
-                      className="h-10 w-10 rounded-md object-cover bg-muted"
-                    />
+                    <div className="h-10 w-10 rounded-md overflow-hidden bg-muted shrink-0">
+                        <ProductImage
+                        src={product.thumbnail}
+                        alt={product.title}
+                        className="h-full w-full object-cover"
+                        />
+                    </div>
                     <span className="font-medium line-clamp-1 max-w-48">
-                      {product.title}
+                        {product.title}
                     </span>
                   </div>
                 </TableCell>

@@ -7,6 +7,8 @@ import ProductsTable from "@/components/ProductsTable"
 
 const PAGE_SIZE = 10
 
+document.title = "Products | ZeeCo"
+
 function ProductsListPage() {
   const [searchParams, setSearchParams] = useSearchParams()
 
@@ -33,17 +35,18 @@ function ProductsListPage() {
   const totalPages = Math.ceil((data?.total ?? 0) / PAGE_SIZE)
 
   function updateParam(key: string, value: string) {
+    window.scrollTo({ top: 0, behavior: "smooth" })
     setSearchParams((prev) => {
-      const next = new URLSearchParams(prev)
-      if (value) {
+        const next = new URLSearchParams(prev)
+        if (value) {
         next.set(key, value)
-      } else {
+        } else {
         next.delete(key)
-      }
-      if (key !== "page") {
+        }
+        if (key !== "page") {
         next.set("page", "1")
-      }
-      return next
+        }
+        return next
     })
   }
 
