@@ -2,7 +2,7 @@
 
 A single-page application for operations users to browse, search, filter, and inspect products.
 
-🔗 **Live Demo:** [ZeeCo Dashboard](https://zeeco.vercel.app/)
+🔗 **Live Demo:** https://zeeco.vercel.app/
 
 ---
 
@@ -30,7 +30,7 @@ A single-page application for operations users to browse, search, filter, and in
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/willgee9531/product-dashboard
 cd product-dashboard
 
 # Install dependencies
